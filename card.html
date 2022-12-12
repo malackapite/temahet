@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card" onclick="katt(0)">
+        <h1>a</h1>
+        <p>asd</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
+            molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
+    </div>
+    <div class="card" onclick="katt(1)">
+        <h1>a</h1>
+        <p>asd</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
+            molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
+    </div>
+    <div class="card" onclick="katt(2)">
+        <h1>a</h1>
+        <p>asd</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
+            molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
+    </div>
+    <script>
+        function katt(nth){
+            
+            for(let ix=0; ix<3;ix++)
+            document.getElementsByClassName("card")[ix].classList.remove("megjelen")
+            document.getElementsByClassName("card")[nth].classList.add("megjelen")
+        }
+    </script>
+</body>
+
+</html>
