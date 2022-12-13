@@ -10,19 +10,19 @@
 </head>
 
 <body>
-    <div class="card" onclick="katt(0)">
+    <div class="card" onclick="katt(0)" onmousemove="mozog(0)">
+        <img src="teszt.png" alt="">
+        <p>asd</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
+            molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
+    </div>
+    <div class="card" onclick="katt(1)" onmousemove="mozog(1)">
         <h1>a</h1>
         <p>asd</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
             molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
     </div>
-    <div class="card" onclick="katt(1)">
-        <h1>a</h1>
-        <p>asd</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
-            molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
-    </div>
-    <div class="card" onclick="katt(2)">
+    <div class="card" onclick="katt(2)" onmousemove="mozog(2)">
         <h1>a</h1>
         <p>asd</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
@@ -34,6 +34,24 @@
             for(let ix=0; ix<3;ix++)
             document.getElementsByClassName("card")[ix].classList.remove("megjelen")
             document.getElementsByClassName("card")[nth].classList.add("megjelen")
+        }
+        
+        function mozog(nth){
+            var hossz = document.getElementsByClassName("card")[0].clientWidth; 
+            var magas = document.getElementsByClassName("card")[0].clientHeight; 
+            //console.log(document.getElementsByClassName("card")[0].offsetLeft)
+            console.log((hossz/2-event.clientX)/(hossz/2))
+            //document.getElementsByClassName("card")[1].offsetLeft)
+            // console.log(document.getElementsByClassName("card")[1].offsetLeft)
+            // console.log(hossz/2)
+            // console.log(event.clientX)
+            console.log(((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)+"deg")
+            document.body.style.setProperty('--egerX', ((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)*20+"deg");
+            document.body.style.setProperty('--egerY', ((document.getElementsByClassName("card")[nth].offsetTop+magas/2)-event.clientY)/(magas/2)*-20+"deg");
+            // document.body.style.setProperty('--egerX', (hossz/2-event.clientX)/(hossz/2)*20+"deg");
+            // document.body.style.setProperty('--egerY', (magas/2-event.clientY)/(magas/2)*-20+"deg");
+            //igen
+            // document.body.style.setProperty('--xyz',    (((window.innerWidth/2)-event.clientX)/(window.innerWidth/2))+(((window.innerHeight/2)-event.clientY)/(window.innerHeight/2))*-60+"deg");
         }
     </script>
 </body>
