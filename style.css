@@ -15,7 +15,7 @@ div{
     width: 300px;
     transition: width 1s, height 2s;
     
-    /* transform: rotate3d(var(--egerY),var(--egerX) , 0, var(--xyz)); */
+    /* transform: rotate3d(var(--egerY),var(--egerX) , 0, var(--xyz));*/
 }
 div *{
     margin: 10px;
