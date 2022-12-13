@@ -37,21 +37,12 @@
         }
         
         function mozog(nth){
-            var hossz = document.getElementsByClassName("card")[0].clientWidth; 
-            var magas = document.getElementsByClassName("card")[0].clientHeight; 
-            //console.log(document.getElementsByClassName("card")[0].offsetLeft)
+            var hossz = document.getElementsByClassName("card")[nth].clientWidth; 
+            var magas = document.getElementsByClassName("card")[nth].clientHeight; 
             console.log((hossz/2-event.clientX)/(hossz/2))
-            //document.getElementsByClassName("card")[1].offsetLeft)
-            // console.log(document.getElementsByClassName("card")[1].offsetLeft)
-            // console.log(hossz/2)
-            // console.log(event.clientX)
             console.log(((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)+"deg")
             document.body.style.setProperty('--egerX', ((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)*20+"deg");
             document.body.style.setProperty('--egerY', ((document.getElementsByClassName("card")[nth].offsetTop+magas/2)-event.clientY)/(magas/2)*-20+"deg");
-            // document.body.style.setProperty('--egerX', (hossz/2-event.clientX)/(hossz/2)*20+"deg");
-            // document.body.style.setProperty('--egerY', (magas/2-event.clientY)/(magas/2)*-20+"deg");
-            //igen
-            // document.body.style.setProperty('--xyz',    (((window.innerWidth/2)-event.clientX)/(window.innerWidth/2))+(((window.innerHeight/2)-event.clientY)/(window.innerHeight/2))*-60+"deg");
         }
     </script>
 </body>
