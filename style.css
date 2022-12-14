@@ -1,28 +1,38 @@
-/* html{
-    background-color: black;
-    color: white;
-} */
+:root{
+    /* --hatter: white;
+    --szin: black;
+    --keret: rgb(165, 212, 255);
+    --szin2: rgb(230, 243, 255); */
+    --hatter: black;
+    --szin: white;
+    --keret: rgb(63, 63, 63);
+    --szin2: rgb(31, 31, 31);
+}
+ html{
+    background-color: var(--hatter);
+    color: var(--szin);
+}
 body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 div{
-    background: linear-gradient(white, rgb(230, 243, 255));
-    border: 3px solid rgb(165, 212, 255);
+    background: linear-gradient(var(--hatter), var(--szin2));
+    border: 3px solid var(--keret);
     border-radius: 20px;
     height: 200px;
     width: 300px;
-    transition: width 1s, height 2s;
-    
-    /* transform: rotate3d(var(--egerY),var(--egerX) , 0, var(--xyz));*/
+    transition: width 1s, height 2s, scale 1s, transform 0s;
 }
 div *{
     margin: 10px;
+    transition: opacity 1s;
 }
 div:hover{
     height: 200px;
-    transform: rotateX(var(--egerY)) rotateY(var(--egerX)) scale(1.05);
+    transform: rotateX(var(--egerY)) rotateY(var(--egerX)); 
+    scale: 1.05;
 }
 
 div:hover p:nth-child(2){
@@ -30,14 +40,14 @@ div:hover p:nth-child(2){
 }
 p{
     opacity: 0;
-    transition: all 1s 2s;
+}
+.megjelen p{
+    transition: opacity 1s 1s;
 }
 
 .megjelen, .megjelen:hover{
     height: 500px;
     width: 300px;
-    /* position: absolute; */
-    /* left: calc(50% - 150px); */
 }
 .megjelen *, .megjelen:hover *{
     opacity: 1;
@@ -47,4 +57,3 @@ img{
     width: 100px;    
 }
 /* background: linear-gradient(white, rgb(230, 243, 255)); */
-/*transform: rotate3d(1, 1, 0, 360deg);*/

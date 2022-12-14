@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Galéria</title>
 </head>
 
 <body>
@@ -39,8 +39,6 @@
         function mozog(nth){
             var hossz = document.getElementsByClassName("card")[nth].clientWidth; 
             var magas = document.getElementsByClassName("card")[nth].clientHeight; 
-            console.log((hossz/2-event.clientX)/(hossz/2))
-            console.log(((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)+"deg")
             document.body.style.setProperty('--egerX', ((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)*20+"deg");
             document.body.style.setProperty('--egerY', ((document.getElementsByClassName("card")[nth].offsetTop+magas/2)-event.clientY)/(magas/2)*-20+"deg");
         }
