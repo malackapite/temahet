@@ -28,21 +28,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id deserunt blanditiis quisquam. Atque, ex
             molestias hic nesciunt cum nisi illo ipsum aut nihil laboriosam officiis eligendi tempore quia. Nobis.</p>
     </div>
-    <script>
-        function katt(nth){
-            
-            for(let ix=0; ix<3;ix++)
-            document.getElementsByClassName("card")[ix].classList.remove("megjelen")
-            document.getElementsByClassName("card")[nth].classList.add("megjelen")
-        }
-        
-        function mozog(nth){
-            var hossz = document.getElementsByClassName("card")[nth].clientWidth; 
-            var magas = document.getElementsByClassName("card")[nth].clientHeight; 
-            document.body.style.setProperty('--egerX', ((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)*20+"deg");
-            document.body.style.setProperty('--egerY', ((document.getElementsByClassName("card")[nth].offsetTop+magas/2)-event.clientY)/(magas/2)*-20+"deg");
-        }
-    </script>
+    <script src="sj.js"></script>
 </body>
 
 </html>

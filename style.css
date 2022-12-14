@@ -1,18 +1,19 @@
-:root{
-    /* --hatter: white;
+.light{
+    --hatter: white;
     --szin: black;
     --keret: rgb(165, 212, 255);
-    --szin2: rgb(230, 243, 255); */
+    --szin2: rgb(230, 243, 255);
+}
+.dark{
     --hatter: black;
     --szin: white;
     --keret: rgb(63, 63, 63);
     --szin2: rgb(31, 31, 31);
 }
- html{
+
+body{
     background-color: var(--hatter);
     color: var(--szin);
-}
-body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
