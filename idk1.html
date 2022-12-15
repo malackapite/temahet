@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idk.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="yeah"></div>
+    <script>
+    for(let ix = 0; ix < 12; ix++)
+        document.getElementsByTagName("body")[0].innerHTML+=`<div class="yeah"></div>`       
+    //for(let ix = 0; ix < 12; ix++)
+    var x=500,y=500
+    setInterval(() => {
+        for(let ix = 0; ix < 12; ix++){
+            x+=document.getElementsByClassName("yeah")[ix].clientLeft+ Math.random() * 10 -5
+            y+=document.getElementsByClassName("yeah")[ix].clientTop+ Math.random() * 10 -5
+            document.getElementsByClassName("yeah")[ix].style.top=x+"px"
+            document.getElementsByClassName("yeah")[ix].style.left=y+"px"
+            //document.getElementsByClassName("yeah")[0].style.transform=`translate(${x}px, ${y}px)`
+        }
+    }, 100);
+    </script>
+</body>
+</html>
