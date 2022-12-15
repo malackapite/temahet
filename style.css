@@ -39,11 +39,15 @@ div:hover{
 div:hover p:nth-child(2){
     opacity: 1;
 }
-p{
+p, a{
     opacity: 0;
 }
-.megjelen p{
+.megjelen p, .megjelen a{
     transition: opacity 1s 1s;
+}
+a{
+    text-decoration: none;
+    color: var(--szin);
 }
 
 .megjelen, .megjelen:hover{
