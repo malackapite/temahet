@@ -8,21 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="yeah"></div>
-    <script>
-    for(let ix = 0; ix < 12; ix++)
-        document.getElementsByTagName("body")[0].innerHTML+=`<div class="yeah"></div>`       
-    //for(let ix = 0; ix < 12; ix++)
-    var x=500,y=500
-    setInterval(() => {
-        for(let ix = 0; ix < 12; ix++){
-            x+=document.getElementsByClassName("yeah")[ix].clientLeft+ Math.random() * 10 -5
-            y+=document.getElementsByClassName("yeah")[ix].clientTop+ Math.random() * 10 -5
-            document.getElementsByClassName("yeah")[ix].style.top=x+"px"
-            document.getElementsByClassName("yeah")[ix].style.left=y+"px"
-            //document.getElementsByClassName("yeah")[0].style.transform=`translate(${x}px, ${y}px)`
-        }
-    }, 100);
-    </script>
+    <main>
+        <h1>cím</h1>
+        <p>szöveg</p>
+        <input type="button" onclick="villany()">
+    </main>
+    <script src="idk.js"></script>
 </body>
 </html>
