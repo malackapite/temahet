@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sz.css">
+    <link rel="stylesheet" href="idk.css">
+</head>
+
+<body>
+    <div id="full">
+        <div class="tuz">
+            <div class="a"></div>
+            <div class="b"></div>
+        </div>
+        <div class="tuz">
+            <div id="a2"></div>
+            <div id="b2"></div>
+        </div>
+        <div class="tuz">
+            <div id="a3"></div>
+            <div id="b3"></div>
+        </div>
+        <div id="foil">
+            <div id="foil1"></div>
+            <div id="foil2"></div>
+        </div>
+        <div id="gas">
+            <div id="gas1"></div>
+            <div id="gas2"></div>
+        </div>
+    </div>
+    <main>
+        <article id="cim">
+            <div>
+                <h1><span>Környezetszennyezés</span></h1>
+                <p>A környezetszennyezés az élőlények környezetének kedvezőtlen irányú megváltoztatása, a környezeti elemek, levegő, víz, talaj előnytelen összetétel-változásával és minőségromlásával járó tevékenység, illetve jelenség vagy maga az előnytelen összetétel-változást és minőségromlást okozó anyag. A környezetszennyezés lehet fizikai, kémiai, vagy biológiai természetű.</p>
+                <button onclick="a()">a</button>
+            </div>
+            <img src="forest.jpg" alt="">
+        </article>
+        <br>
+        <div id="slider" onmousedown="le(event)" onmouseup="fel(event)">
+            <article id="olaj">
+                <div id="szoveg">
+                    <h2 onclick="csere(0)">oil</h2>
+                    <!-- https://yoksel.github.io/url-encoder/ -->
+                    <!-- <svg style="display: inline;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#000000" fill-opacity="1"
+                            d="M0,96L80,85.3C160,75,320,53,480,80C640,107,800,181,960,197.3C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                        </path>
+                    </svg> -->
+                    <div class="wave"></div>
+                    <p id="csere">Petroleum is a fossil fuel that can be drawn from beneath the earth's surface. Reservoirs of
+                        petroleum was formed through the mixture of plants, algae, and sediments in shallow seas under
+                        high
+                        pressure. Petroleum is mostly recovered from oil drilling. Seismic surveys and other methods are
+                        used to locate oil reservoirs. Oil rigs and oil platforms are used to drill long holes into the
+                        earth to create an oil well and extract petroleum. After extraction, oil is refined to make
+                        gasoline
+                        and other products such as tires and refrigerators. Extraction of petroleum can be dangerous and
+                        have led to oil spills.</p>
+                </div>
+                <div><img src="oil.png" alt="olajbánya" style="float: left;">
+                    <img src="oil.png" alt="olajbánya">
+                    <!-- oil miner flat design 2d gif -->
+                    <br>
+                    <div id="sorol">
+
+                        <div>
+                            <h3 onclick="csere(1)">Toxic compounds</h3>
+
+                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse beatae similique est numquam
+                            porro delectus, nam ipsam blanditiis quam nemo temporibus nisi iure culpa inventore facere
+                            mollitia tenetur accusamus voluptate!</p> -->
+                        </div>
+                        <div>
+                            <h3 onclick="csere(2)">Greenhouse gases</h3>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, omnis qui ab excepturi
+                            tenetur quae cumque. Labore, tempore reprehenderit dolor, eveniet quia officia et aliquid
+                            cupiditate pariatur quaerat quo facilis.</p> -->
+                        </div>
+                        <div>
+                            <h3 onclick="csere(3)">Microplastics</h3>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, omnis qui ab excepturi
+                            tenetur quae cumque. Labore, tempore reprehenderit dolor, eveniet quia officia et aliquid
+                            cupiditate pariatur quaerat quo facilis.</p> -->
+                        </div>
+                        <div>
+                            <h3 onclick="csere(4)">Air pollution</h3>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, omnis qui ab excepturi
+                            tenetur quae cumque. Labore, tempore reprehenderit dolor, eveniet quia officia et aliquid
+                            cupiditate pariatur quaerat quo facilis.</p> -->
+                        </div>
+                        <div>
+                            <h3 onclick="csere(5)">Acid rain</h3>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, omnis qui ab excepturi
+                            tenetur quae cumque. Labore, tempore reprehenderit dolor, eveniet quia officia et aliquid
+                            cupiditate pariatur quaerat quo facilis.</p> -->
+                        </div>
+                        <div>
+                            <h3 onclick="csere(6)">Oil spills</h3>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, omnis qui ab excepturi
+                            tenetur quae cumque. Labore, tempore reprehenderit dolor, eveniet quia officia et aliquid
+                            cupiditate pariatur quaerat quo facilis.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="olaj"></div> -->
+            </article>
+            <article id="levego" style="display: none;">
+                <div>
+                    <h2>air</h2>
+                    <p>Air pollution is the contamination of air due to the presence of substances in the atmosphere
+                        that
+                        are harmful to the health of humans and other living beings, or cause damage to the climate or
+                        to
+                        materials</p>
+                </div>
+                <div>
+                    <div id="asd">
+                        <div class="leg">
+                            <p>Egy 100 ezer tonnás égető átlagosan 70 ezer köbméter szennyezett füstgázt bocsát ki,
+                                minden egyes
+                                órában.</p>
+                        </div>
+                        <div class="leg" style="animation-delay: -5s;">
+                            <p>Egy 100 ezer tonnás égető átlagosan 70 ezer köbméter szennyezett füstgázt bocsát ki,
+                                minden egyes
+                                órában.</p>
+                        </div>
+                        <div class="leg" style="animation-delay: -10s;">
+                            <p>Egy 100 ezer tonnás égető átlagosan 70 ezer köbméter szennyezett füstgázt bocsát ki,
+                                minden egyes
+                                órában.</p>
+                        </div>
+                        <div class="leg" style="animation-delay: -15s;">
+                            <p>Anya begagiltam xdddddddddddddd</p>
+                        </div>
+                    </div>
+                    <img src="factory.png" alt="bruh">
+                </div>
+            </article>
+        </div>
+        <br>
+        <!-- <div onclick="lapoz(1)"><</div>
+        <div onclick="lapoz(2)">></div> -->
+        <article style="display: block;">
+            <h2>Mit tehetsz ellene?</h2>
+            <input value="villanykapcsoló" type="button" onclick="villany()">
+        </article>
+    </main>
+    <script src="https://kit.fontawesome.com/3f895a7a65.js" crossorigin="anonymous"></script>
+    <script src="idk0.js"></script>
+    <!-- <script src="idk.js"></script> -->
+</body>
+
+</html>
