@@ -129,7 +129,7 @@ p{
 #slider > *{
     width: 100%;
 }
-#olaj::before{
+/* #olaj::before{
     content: '';
     position: relative;
     background-color: black;
@@ -140,7 +140,7 @@ p{
     top: 420px;
     right: 160px;
     border: solid 1px white;
-}
+} */
 br{
     clear: both;
 }
@@ -357,6 +357,13 @@ br{
       align-content: space-between;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    #levego {
+      grid-template-columns: 1fr;
+    }
+  }
+
 @media only screen and (max-width: 600px) {
     #sorol {
       grid-template-columns: 1fr;
