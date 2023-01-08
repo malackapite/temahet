@@ -207,7 +207,7 @@ br{
 }
 
 #foil1{
-    background: url(wave.png) repeat-x;
+    background: url(../images/wave.png) repeat-x;
     background-size: 360px;
     background-position-y: 100%;
     height: 100%;
@@ -229,7 +229,7 @@ br{
 }
 
 .wave {
-  background: url(wave.png) repeat-x; 
+  background: url(../images/wave.png) repeat-x; 
   height: 100px;
   background-size: 1000px 100px;
   animation: wave 30s linear infinite;
@@ -345,11 +345,11 @@ br{
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url(NotoSans-Black.ttf);
+    src: url(fonts/NotoSans-Black.ttf);
 }
 @font-face {
     font-family: "Noto Sans Light";
-    src: url(NotoSans-Regular.ttf);
+    src: url(fonts/NotoSans-Regular.ttf);
 }
 @media only screen and (max-width: 1000px) {
     #cim {
