@@ -8,100 +8,131 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="full">
+        <div class="tuz">
+            <div class="a"></div>
+            <div class="b"></div>
+        </div>
+        <div class="tuz">
+            <div id="a2"></div>
+            <div id="b2"></div>
+        </div>
+        <div class="tuz">
+            <div id="a3"></div>
+            <div id="b3"></div>
+        </div>
+        <div id="foil">
+            <div id="foil1"></div>
+            <div id="foil2"></div>
+        </div>
+        <div id="gas">
+            <div id="gas1"></div>
+            <div id="gas2"></div>
+        </div>
+    </div>
     <main>
-        <header>
-            <img src="../images/fold.gif" alt="fold">
-        </header>
-        <article>
-            <div class="bevez">
+        <div id="menu">
+            <div onclick="lapoz(0);animacio(0);hol=0"></div>
+            <div onclick="lapoz(1);animacio(1);hol=1"></div>
+            <div onclick="lapoz(2);animacio(2);hol=2"></div>
+        </div>
+        <div id="slider" onmousedown="le(event)" onmouseup="fel(event)">
+            <article class="bevez">
                 <h1>Tényleg környezet kímélőbbek az elektromos járművek?</h1>
                 <p>
                     A veboldal készítésekor megpróbáltam pártatlan maradni amennyire csak tudtam, mert én magam is rajongok az autók iránt.
                     Szeretem a benzines és az elektromos autókat is. Egyik oldalért se harcolok, csak tudni akarom az igaz tényeket a témával kapcsolatban.
                 </p>
+            </article>
+
+            <article id="kozep">
+                
+                <div id="kicsi">
+                <div class="egyart">
+                    <h1>Elektromos autók gyártása</h1>
+                    <p>
+                        Jelenleg az elektromos járművek legyártásának nagyobb széndioxid-terhelése van mint a belső égésű motorral rendelkező járműveknek.
+                        Lítium szükséges az elektromos járművek elemeinek legyártásához, aminek a bányászata rengeteg uvegházi gázt termel.
+                        Egy darab elektromos jármű elkészítése átlagosan 8-10 tonna szén-dioxidot termel.
+                        Egy kisebb elektromos autó legyártása nagyjából 2-5, egy nagyobb pedig 17-20 tonna szén-dioxidot termel, miközben egy belső égésű motorral rendelkező auto kb. 7-et.
+                    </p>
+                </div>
+                <div class="labnyom">
+                    <h1>Gázmotoros autó nyersanyagai</h1>
+                    <p>
+                    A világ lítiumkészletének fele az úgynevezett lítium háromszogből származik, egy terület Chíle, Bolivia, és Argentína között.
+                    A bányászatához rengeteg vizet kell felhasználni a fúrás körülötti területekről, ami csökkentette a vízellátást így kevés felhasználható víz maradt a helyi mezőgazdaság számára.
+                    A bányászvállalatok Chile Salar de Atacama nevű régió vizének 65%-át már felhasználták.
+                    750 tonna sóoldat szükséges 1 tonna lítium előállításához, de a lítium csak az egyik komponense az elemeknek.
+                    </p>
+                </div>
+                <div class="kobalt">
+                    <h1>Kóbalt bányászat</h1>
+                    <p>
+                        Egyre nagyobb aggodalom övezi beszerzését a kóbalt, ami szintén szükséges az elemek gyártásához.
+                        Viszont a probléma inkább az etikai dilemma ennek a nyersanyag beszerzésével, mivel egyes kóbaltbányákban gyerekmunkát alkalmaznak, ami elítélendő.
+                    </p>
+                </div>
+                <div class="ujrahasznos">
+                    <h1>Elemek újrahasznosítása</h1>
+                    <p>
+                        A folyamat, amelyben a lítium-ion akkumulátorokat újrahasznosítják nem azon a ponton van ahol lennie kéne, ahoz ,hogy megbírkozzon a növekvő számú kimerült akumulátorokkal.
+                        Rengetek különböző probléma van az ilyes fajta elemek újrahasznosításával.
+                        Például a tárolásuk nagy gondot okoz volatilitásuk miatt, már több tűz eset is volt régi akkumulátorokat feldolgozó létesítményekben.
+                        Az gázmotorokhoz képest még gyerekcipőben jár a tekhnológia az elektromos autók előállításához, így nagy valószínűséggel még sokat fog fejlődni a jövőben.
+                    </p>
+                </div>
+                <div class="energia">
+                    <h1>Energia/elektromosság beszerzése</h1>
+                    <p>
+                        Jelenleg számos régiókban a világon még mindig szénerőművekből nyerik az energiát.
+                        Tehát a vezetés hatása nulla károsanyag-libocsátású autóval azokban a régiókban, jobban károsítja a környezetet, mint egy elektromos jármű vezetése tiszta energiával.
+                        mint pl.:
+                    </p>
+                    <ul>
+                        <li>Szélerőmű</li>
+                        <li>Napelem</li>
+                        <li>Vízerőmű</li>
+                    </ul>
+                    <p>
+                        Viszont ahogy az ilyen tipusú energia egyre gyakoribbá válik, az elektromos járművek hatékonysága csak javulni fog.
+                    </p>
+                </div>
+                <div class="ogyart">
+                    <h1>Belső égésű autó gyártása</h1>
+                    <p>
+                        Az átlag gyártása egy belső égésű járműnek 7 tonna szén-dioxidot termel.
+                        Ez az egy szám mindent figyelembe vesz a fém bányászatától addig a pillanatig míg a jármű legurul a gyártósorról.
+                        Ez a szám kisebb az elektomos autóknál a lítium akumulátorok hiánya miatt.
+                        Ehez annak is köze van, hogy milyen fejletté vált már a gázmotoros autók gyártása az évek során.
+                        Miután az autó kigurul a gyárból a benzin üzemű autókból származó üvegházhatású kibocsátások átlaga 5,2 tonna évente, akkor ha az autó az átlagosan 18990 km-t ment.
+                        Az autó élete alatt 57 tonna szén-dioxidért felelős, a lítiumhoz hasonlóan a benzint is bányászni kell.
+                        Átlagosan egy autó 1900 l-t benzint fogyaszt évente. 
+                    </p>
+                </div>
+                <div class="olaj">
+                    <h1>Gázmotoros autó nyersanyagai</h1>
+                    <p>
+                        Sok lépés van a kőolaj kitermelése és az autó tankolása között a benzinkútnál, és minden lépésnek környezeti hatása van.
+                        A kőolaj litermelése a földbefúrással kezdődik, akár a szárazföldön, akár az oceán fenekén.
+                        Miután a kőolajat kibányásszák, benzinné kell finomítani és egyéb kőolajtermékek mint például:
+                    </p>
+                    <ul>
+                        <li>Repülőgép üzemanyag</li>
+                        <li>Vazelin</li>
+                        <li>Müanyag</li>
+                    </ul>
+                    <p>
+                        is készül a finomítás után.
+                        Ez az egész folyamat több tonna üvegházhatású gázt bocsát ki, beleértve nemcsak a szén-dioxidot, hanem a metánt és a dinitrogén-oxidot is.
+                        Minden nap szerte a világon közel 95 millió hordó olajat állítanak elő és minden nap az olajfinomítás a felelős 767 millió tonna szén-dioxid kivocsátásáért.
+                        Persze az átlagos autó évente 5,2 tonna szén-dioxidotért felelős, de az olajfinomítók 280 MILLIÁRD tonna szén-dioxidot bocsátanak ki ugyan abban az időkeretben.
+                    </p>
+                </div>
             </div>
-            <div class="egyart">
-                <h1>Elektromos autók gyártása</h1>
-                <p>
-                    Jelenleg az elektromos járművek legyártásának nagyobb széndioxid-terhelése van mint a belső égésű motorral rendelkező járműveknek.
-                    Lítium szükséges az elektromos járművek elemeinek legyártásához, aminek a bányászata rengeteg uvegházi gázt termel.
-                    Egy darab elektromos jármű elkészítése átlagosan 8-10 tonna szén-dioxidot termel.
-                    Egy kisebb elektromos autó legyártása nagyjából 2-5, egy nagyobb pedig 17-20 tonna szén-dioxidot termel, miközben egy belső égésű motorral rendelkező auto kb. 7-et.
-                </p>
-            </div>
-            <div class="labnyom">
-                <h1>Gázmotoros autó nyersanyagai</h1>
-                <p>
-                   A világ lítiumkészletének fele az úgynevezett lítium háromszogből származik, egy terület Chíle, Bolivia, és Argentína között.
-                   A bányászatához rengeteg vizet kell felhasználni a fúrás körülötti területekről, ami csökkentette a vízellátást így kevés felhasználható víz maradt a helyi mezőgazdaság számára.
-                   A bányászvállalatok Chile Salar de Atacama nevű régió vizének 65%-át már felhasználták.
-                   750 tonna sóoldat szükséges 1 tonna lítium előállításához, de a lítium csak az egyik komponense az elemeknek.
-                </p>
-            </div>
-            <div class="kobalt">
-                <h1>Kóbalt bányászat</h1>
-                <p>
-                    Egyre nagyobb aggodalom övezi beszerzését a kóbalt, ami szintén szükséges az elemek gyártásához.
-                    Viszont a probléma inkább az etikai dilemma ennek a nyersanyag beszerzésével, mivel egyes kóbaltbányákban gyerekmunkát alkalmaznak, ami elítélendő.
-                </p>
-            </div>
-            <div class="ujrahasznos">
-                <h1>Elemek újrahasznosítása</h1>
-                <p>
-                    A folyamat, amelyben a lítium-ion akkumulátorokat újrahasznosítják nem azon a ponton van ahol lennie kéne, ahoz ,hogy megbírkozzon a növekvő számú kimerült akumulátorokkal.
-                    Rengetek különböző probléma van az ilyes fajta elemek újrahasznosításával.
-                    Például a tárolásuk nagy gondot okoz volatilitásuk miatt, már több tűz eset is volt régi akkumulátorokat feldolgozó létesítményekben.
-                    Az gázmotorokhoz képest még gyerekcipőben jár a tekhnológia az elektromos autók előállításához, így nagy valószínűséggel még sokat fog fejlődni a jövőben.
-                </p>
-            </div>
-            <div class="energia">
-                <h1>Energia/elektromosság beszerzése</h1>
-                <p>
-                    Jelenleg számos régiókban a világon még mindig szénerőművekből nyerik az energiát.
-                    Tehát a vezetés hatása nulla károsanyag-libocsátású autóval azokban a régiókban, jobban károsítja a környezetet, mint egy elektromos jármű vezetése tiszta energiával.
-                    mint pl.:
-                </p>
-                <ul>
-                    <li>Szélerőmű</li>
-                    <li>Napelem</li>
-                    <li>Vízerőmű</li>
-                </ul>
-                <p>
-                    Viszont ahogy az ilyen tipusú energia egyre gyakoribbá válik, az elektromos járművek hatékonysága csak javulni fog.
-                </p>
-            </div>
-            <div class="ogyart">
-                <h1>Belső égésű autó gyártása</h1>
-                <p>
-                    Az átlag gyártása egy belső égésű járműnek 7 tonna szén-dioxidot termel.
-                    Ez az egy szám mindent figyelembe vesz a fém bányászatától addig a pillanatig míg a jármű legurul a gyártósorról.
-                    Ez a szám kisebb az elektomos autóknál a lítium akumulátorok hiánya miatt.
-                    Ehez annak is köze van, hogy milyen fejletté vált már a gázmotoros autók gyártása az évek során.
-                    Miután az autó kigurul a gyárból a benzin üzemű autókból származó üvegházhatású kibocsátások átlaga 5,2 tonna évente, akkor ha az autó az átlagosan 18990 km-t ment.
-                    Az autó élete alatt 57 tonna szén-dioxidért felelős, a lítiumhoz hasonlóan a benzint is bányászni kell.
-                    Átlagosan egy autó 1900 l-t benzint fogyaszt évente. 
-                </p>
-            </div>
-            <div class="olaj">
-                <h1>Gázmotoros autó nyersanyagai</h1>
-                <p>
-                    Sok lépés van a kőolaj kitermelése és az autó tankolása között a benzinkútnál, és minden lépésnek környezeti hatása van.
-                    A kőolaj litermelése a földbefúrással kezdődik, akár a szárazföldön, akár az oceán fenekén.
-                    Miután a kőolajat kibányásszák, benzinné kell finomítani és egyéb kőolajtermékek mint például:
-                </p>
-                <ul>
-                    <li>Repülőgép üzemanyag</li>
-                    <li>Vazelin</li>
-                    <li>Müanyag</li>
-                </ul>
-                <p>
-                    is készül a finomítás után.
-                    Ez az egész folyamat több tonna üvegházhatású gázt bocsát ki, beleértve nemcsak a szén-dioxidot, hanem a metánt és a dinitrogén-oxidot is.
-                    Minden nap szerte a világon közel 95 millió hordó olajat állítanak elő és minden nap az olajfinomítás a felelős 767 millió tonna szén-dioxid kivocsátásáért.
-                    Persze az átlagos autó évente 5,2 tonna szén-dioxidotért felelős, de az olajfinomítók 280 MILLIÁRD tonna szén-dioxidot bocsátanak ki ugyan abban az időkeretben.
-                </p>
-            </div>
-            <div class="zaras">
+            </article>
+
+            <article class="zaras">
                 <h1>Végszó</h1>
                 <p>
                     Egy autó étlagos élettartalma alatt belső égésű motorral, nagyjából 57 tonna szén-dioxidot bocsát majd ki.
@@ -111,11 +142,10 @@
                     Ez azt jelenti, hogy az átlagos elektromos jármű hatékonyabb lesz, mint egy gázmotors autó 6 hónap sé 2 év vezetése között.
                     Még a legkevésbe hatékony elektromos jármű is, a legszennyezőbb áramforrással jobb lesz a környezetnek, mint a leghatékonyabb gázmotoros autó egy bizonyos idő alatt.
                 </p>
-            </div>
-        </article>
-        <footer>
-            
-        </footer>
+            </article>
+        </div>
     </main>
+    <script src="../scripts/idk0.js"></script>
+    <script src="../scripts/duy.js"></script>
 </body>
 </html>

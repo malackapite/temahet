@@ -14,10 +14,9 @@ main{
     display: grid;
     grid-template-areas: 
     "h"
-    "a"
-    "f";
+    "a";
     text-align: center;
-    font-size: 25px;
+    /* font-size: 25px; */
 }
 
 header{
@@ -32,61 +31,185 @@ article{
     grid-area: a;
 }
 
+
 .bevez{
     background-image: url("../images/bevez.gif");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
     color: rgb(53, 43, 49);
 }
 
 .egyart{
     background-image: url("../images/elemgyar.jpg");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .labnyom{
     background-image: url("../images/haromszog.png");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .kobalt{
     background-image: url("../images/gyermek.png");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .ujrahasznos{
     background-image: url("../images/tuz.png");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .energia{
     background-image: url("../images/szen.jpg");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .ogyart{
     background-image: url("../images/gazgyart.jpg");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .olaj{
     background-image: url("../images/finom.jpg");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
 .zaras{
     background-image: url("../images/xx.jpg");
     background-size: cover;
-    padding: 250px;
+    /* padding: 250px; */
 }
 
-footer{
-    grid-area: f;
+
+
+
+
+
+
+
+
+
+
+
+
+#kicsi{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: calc(100vh - 400px);
+
+    
+}
+#kicsi > *{
+    
+    width: 200px;
+    height: 200px;
+    transition: all 2s;
+    position: relative;
+    top: 0;
+}
+#kicsi > *:hover{
+    /* color: white; */
+    width: 100vw;
+    height: 500px;
+    top: -100%;
+}
+/* @keyframes a {
+    0%{
+        top:0;
+    }
+    100%{
+        
+        top:-100%; 
+    }
+} */
+
+p{
+    display: none;
+}
+
+#id{
+    z-index: 1;
+}
+
+#full > *{
+    visibility: hidden;
+    display: grid;
+    /* animation: tuz 2s forwards; */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+}
+.a{
+    background: linear-gradient(-45deg, yellow 12px, transparent 0),
+    linear-gradient(45deg, yellow 12px, transparent 0);
+    background-size: 36px;
+    height: 100%;
+}
+.b{
+    background-color: yellow;
+}
+#a2{
+    background: linear-gradient(-45deg, orange 12px, transparent 0),
+    linear-gradient(45deg, orange 12px, transparent 0);
+    background-size: 36px;
+    height: 100%;
+}
+#b2{
+    background-color: orange;
+}
+#a3{
+    background: linear-gradient(-45deg, red 12px, transparent 0),
+    linear-gradient(45deg, red 12px, transparent 0);
+    background-size: 36px;
+    height: 100%;
+}
+#b3{
+    background-color: red;
+}
+
+#foil1{
+    background: url(../images/wave.png) repeat-x;
+    background-size: 360px;
+    background-position-y: 100%;
+    height: 100%;
+}
+#foil2{
+    background-color: black;
+}
+
+#gas1{
+    /* background: rgb(190, 110, 0);
+    background-position: center top;
+    border-radius: 40px;
+    background-size: 360px;
+    background-position-y: 120px;
+    height: 100%; */
+}
+#gas2{
+    background-color: rgb(190, 110, 0);;
+}
+
+@keyframes tuz {
+    0%{
+        visibility: visible;
+        grid-template-rows: auto 0%;
+    }
+    40%{
+        grid-template-rows: auto 100%;
+    }
+    60%{
+        grid-template-rows: auto 100%;
+    }
+    100%{
+        visibility: visible;
+        grid-template-rows: auto 0%;
+    }
 }
