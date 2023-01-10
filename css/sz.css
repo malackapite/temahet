@@ -1,26 +1,50 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;  
+    /* scroll-snap-type: y mandatory;   */
     user-select: none;
     overflow: hidden;
+    touch-action: none;
 }
 body{
     /* background-color: #9ce0ff; */
-    
     margin: 0;
     font-family: "Noto Sans Light";
-    
+    /* display: grid; */
 }
 main{
-    
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* height: 100vh; */
     /* display: flex;
     flex-direction: column; */
     /* overflow-wrap: normal; */
 }
+#menu{
+    /* position: fixed; */
+    /* top: 300px; */
+    /* z-index: 1; */
+    transform: translate(calc(50% - 30px));
+    background-color: transparent;
+}
+#menu > *{
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all .5s;
+}
+#menu > *:hover{
+    background-color: lightslategray;
+    transform: scale(1.2);transition: all .5s;
+}
+#menu > *:active{
+    background-color: rgb(130, 174, 218);
+}
 article{
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 22px);
 }
 #olaj{
     
@@ -28,12 +52,12 @@ article{
     grid-template-columns: 1fr 1fr;
     align-items: end;
     /* display: inline; */
-    height: 100vh;
+    height: calc(100vh - 44px);
     /* max-height: 100%; */
     /* position: relative; */
 }
 #cim{
-    height: 100vh;
+    height: calc(100vh - 22px);
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -52,7 +76,7 @@ article{
 #cim img{
     pointer-events: none;
     max-width: 1500px;
-    max-height: 100vh;
+    max-height: calc(100vh - 22px);
     width: 100%;
     position: relative;
     animation: float-right 2s forwards;
@@ -78,8 +102,10 @@ svg{
     background-color: black;
     color: white;
     padding: 30px;
+    text-align: center;
 }
 #sorol{
+    /* box-sizing: border-box; */
     height: 70vh;
     gap: 6px;
     display: grid;
@@ -121,7 +147,7 @@ p{
     text-align: justify;
 }
 #slider{
-    height: 100vh;
+    height: calc(100vh - 22px);
     /* display:block;  */
     /* width: 200%; */
     /* overflow-x: scroll; */
@@ -257,34 +283,15 @@ br{
         left:-10px;
         opacity: 1;
     }
-    20%{
+    20%, 40%, 60%, 80%{
         left:10px;
     }
-    30%{
-        left:-10px;
-    }
-    40%{
-        left:10px;
-    }
-    50%{
-        left: -10px;
-        /* top: 10px; */
-    }
-    60%{
-        left:10px;
-    }
-    70%{
-        left:-10px;
-    }
-    80%{
-        left:10px;
-    }
-    90%{
+    10%, 30%, 50%, 70%, 90%{
         left:-10px;
     }
     100%{
         left: 0;
-        top: -500px;
+        top: -550px;
     }
 }
 @keyframes cso {
@@ -364,11 +371,46 @@ br{
     #levego {
       grid-template-columns: 1fr;
     }
+    @keyframes leg {
+
+        0%, 80%, 90%, 100%{
+            opacity: 0;
+        }
+        0%{
+            left: 0;
+            top: 0;
+        }
+        10%{
+            opacity: 1;
+        }
+        20%, 40%, 60%, 80%{
+            left:10px;
+        }
+        10%, 30%, 50%, 70%, 90%{
+            left:-10px;
+        }
+
+        70%{
+            opacity: 1;
+        }
+        
+        100%{
+            left: 0;
+            top: -550px;
+            opacity: 0;
+        }  
+    }
+    img{
+        float: left;
+    }
   }
 
 @media only screen and (max-width: 600px) {
     #sorol {
       grid-template-columns: 1fr;
+    }
+    #sorol > *{
+        padding: 18px;
     }
   }
 
