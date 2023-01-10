@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Noto Sans Light";
+    src: url(fonts/NotoSans-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: auto;
+    font-family: "Noto Sans Light";
+    display: grid;
+    grid-template-areas: 
+    "h"
+    "a"
+    "f";
+    text-align: center;
+    font-size: 25px;
+}
+
+header{
+    grid-area: h;
+}
+
+header img{
+    width: 100%;
+}
+
+article{
+    grid-area: a;
+}
+
+.bevez{
+    background-image: url("../images/bevez.gif");
+    background-size: cover;
+    padding: 250px;
+    color: rgb(53, 43, 49);
+}
+
+.egyart{
+    background-image: url("../images/elemgyar.jpg");
+    background-size: cover;
+    padding: 250px;
+}
+
+.labnyom{
+    background-image: url("../images/haromszog.png");
+    background-size: cover;
+    padding: 250px;
+}
+
+.kobalt{
+    background-image: url("../images/gyermek.png");
+    background-size: cover;
+    padding: 250px;
+}
+
+.ujrahasznos{
+    background-image: url("../images/tuz.png");
+    background-size: cover;
+    padding: 250px;
+}
+
+.energia{
+    background-image: url("../images/szen.jpg");
+    background-size: cover;
+    padding: 250px;
+}
+
+.ogyart{
+    background-image: url("../images/gazgyart.jpg");
+    background-size: cover;
+    padding: 250px;
+}
+
+.olaj{
+    background-image: url("../images/finom.jpg");
+    background-size: cover;
+    padding: 250px;
+}
+
+.zaras{
+    background-image: url("../images/xx.jpg");
+    background-size: cover;
+    padding: 250px;
+}
+
+footer{
+    grid-area: f;
+}

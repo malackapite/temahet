@@ -7,7 +7,7 @@ else
     document.body.classList.add("light");
 function katt(nth){
     
-    for(let ix=0; ix<3;ix++)
+    for(let ix=0; ix<2;ix++)
         document.getElementsByClassName("card")[ix].classList.remove("megjelen")
     document.getElementsByClassName("card")[nth].classList.add("megjelen")
 }

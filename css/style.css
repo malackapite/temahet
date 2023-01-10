@@ -1,9 +1,15 @@
+@font-face {
+    font-family: "Noto Sans Light";
+    src: url(fonts/NotoSans-Regular.ttf);
+}
+
 .light{
     --hatter: white;
     --szin: black;
     --keret: rgb(165, 212, 255);
     --szin2: rgb(230, 243, 255);
 }
+
 .dark{
     --hatter: black;
     --szin: white;
@@ -12,10 +18,20 @@
 }
 
 body{
+    
+    font-family: "Noto Sans Light";
     background-color: var(--hatter);
     color: var(--szin);
+    
+}
+
+main{
+    margin: auto;
+    margin-top: 10%;
+    width: 40%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 div{
@@ -23,7 +39,7 @@ div{
     border: 3px solid var(--keret);
     border-radius: 20px;
     height: 200px;
-    width: 300px;
+    width: 400px;
     transition: width 1s, height 2s, scale 1s, transform 0s;
 }
 div *{
@@ -34,12 +50,13 @@ div:hover{
     height: 200px;
     transform: rotateX(var(--egerY)) rotateY(var(--egerX)); 
     scale: 1.05;
+    height: 400px;
 }
 
-div:hover p:nth-child(2){
+div:hover p{
     opacity: 1;
 }
-p, a{
+p{
     opacity: 0;
 }
 .megjelen p, .megjelen a{
