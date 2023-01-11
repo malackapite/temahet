@@ -53,7 +53,7 @@ div:hover{
     height: 200px;
     transform: rotateX(var(--egerY)) rotateY(var(--egerX)); 
     /* scale: 1.05; */
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     height: 400px;
 }
 
