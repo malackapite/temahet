@@ -1,5 +1,6 @@
-window.scroll(0, 0);
-
+window.onload = function(){
+  window.scroll(0, 0);
+}
 hol = 0;
 olaj = [
   `
@@ -10,48 +11,41 @@ olaj = [
   platformokat használnak hosszú lyukak fúrására a földbe, hogy olajkutat hozzanak létre és
   kőolajat nyerjenek ki.
 `,
-  "a",
-  "2",
-  `A mikroműanyag, vagy más néven mikroplasztik az 5 milliméternél kisebb műanyagdarabokat jelenti. Ezek az apró darabkák a műanyagok bomlási folyamata során keletkeznek a műanyagok szerkezetének szétesésével, melyet első sorban az ultraviola sugarak okoznak, a napsugárzáson keresztül. A műanyag szerkezeti változásának a másik okozója az anyag elöregedése, szerkezetében a kötések megváltozása.`,
-  "4",
+  "A kőolaj számos összetevője összetett keverék. Az olajok toxicitása a toxikus potenciál alapján, illetve az egyes olajkomponensek toxicitása alapján érthető meg az adott komponens vízoldhatóságánál. A különböző olajváltozatok eltérő toxicitási szintje ellenére minden kőolajból származó termék káros hatással van az emberi egészségre és az ökoszisztémára.",
+  "A kőolaj-kitermelés megbontja a Föld szénciklusának egyensúlyát azáltal, hogy a megkötött geológiai szenet a bioszférába szállítja. A szenet a fogyasztók különféle formákban használják fel, és nagy része elégetik a légkörbe; így hatalmas mennyiségű üvegházhatású gáz, szén-dioxid keletkezik hulladéktermékként. A földgáz (többnyire metán) még erősebb üvegházhatású, ha elégetése előtt a légkörbe kerül.",
+  `A műanyagok nagy részét nem hasznosítják újra, és idővel egyre kisebb darabokra töredeznek. A mikroműanyagok olyan részecskék, amelyek mérete kisebb, mint 5 mm. A mikroműanyagok a földfelszín szinte minden helyéről gyűjtött levegő-, víz- és talajmintákban, és egyre inkább biológiai mintákon is megfigyelhetők. A műanyaghulladék környezeti felhalmozódásának hosszú távú hatásai tudományos értékelés alatt állnak, de eddig többnyire ismeretlenek. A mikroműanyagok aggodalomra adnak okot, mert hajlamosak a szennyező anyagok felszívódására a felületükön, valamint bioakkumulálódni is képesek.`,
+  "Az olajháború a kőolajforrásokkal, vagy azok szállításával, fogyasztásával vagy szabályozásával kapcsolatos konfliktus. A kifejezés általánosságban utalhat bármely konfliktusra egy olyan régióban, amely olajtartalékokkal rendelkezik, vagy földrajzilag olyan helyen található, ahol egy entitás kőolajtermékek termelési vagy szállítási infrastruktúráját fejleszti, vagy fejleszteni kívánja.",
   "A savas eső alapvetően megváltozott pH-értékű csapadék. Nehéz elhatárolni az antropogén hatásra kialakuló savas esőt a természetes folyamatok között kialakulótól. Ezen mindennapi folyamatok hatására a csapadékvíz természetes pH-értéke 5 körüli. Itt főleg a vízben oldott szén-dioxid és szulfátrészecskék játsszák a főszerepet. Néhány jól ismert folyamatban is meghatározó szerepe van a csapadék természetes savasságának, ilyen például a karsztosodás is.",
   "Az olajszennyezés emberi tevékenység következtében folyékony kőolajból származó szénhidrogén kibocsátása a környezetbe, különösen a tengeri ökoszisztémába, és a szennyezés egy formája. A kifejezést általában a tengeri olajszennyezésekre szokták használni, amikor az olaj az óceánba vagy a part menti vizekbe kerül, de előfordulhatnak kiömlések a szárazföldön is.",
 ];
 
-function a() {
-  for (let ix = 0; ix < 3; ix++) {
-    document.getElementsByClassName("tuz")[ix].style.animation = "tuz 4s";
-    document.getElementsByClassName("tuz")[ix].style.animationDelay =
-      ix * 0.3 + "s";
-    setTimeout(() => {
-      document.getElementsByClassName("tuz")[ix].style.animation = null;
-    }, 5000);
-  }
-  new Audio("../css/sounds/mixkit-fire-swoosh-burning-1328.wav").play();
-  setTimeout(() => {
-    document.getElementsByTagName("article")[1].scrollIntoView();
-  }, 2000);
-}
 function animacio(nth) {
   switch (nth) {
     case 0:
-      a();
+      for (let ix = 0; ix < 3; ix++) {
+        document.getElementsByClassName("tuz")[ix].style.animation = "tuz 4s";
+        document.getElementsByClassName("tuz")[ix].style.animationDelay =
+          ix * 0.3 + "s";
+        setTimeout(() => {
+          document.getElementsByClassName("tuz")[ix].style.animation = null;
+        }, 5000);
+      }
+      new Audio("../css/sounds/mixkit-fire-swoosh-burning-1328.wav").play();
       break;
     case 1:
       document.getElementById("foil").style.animation = "tuz 4s";
       setTimeout(() => {
         document.getElementById("foil").style.animation = null;
       }, 4000);
+      new Audio("../css/sounds/oil.wav").play();
       break;
     case 2:
       document.getElementById("gas").style.animation = "tuz 4s";
       setTimeout(() => {
         document.getElementById("gas").style.animation = null;
       }, 4000);
-      break;
-
-    // default:
-    //     break
+      new Audio("../css/sounds/air.wav").play();
+      break
   }
 }
 function lapoz(nth) {
@@ -72,17 +66,17 @@ function lapoz(nth) {
   }, 2000);
 }
 
-var asd;
+var NicolasVonCursor;
 function le(event) {
-  asd = event.clientX;
-  console.log(asd);
+  NicolasVonCursor = event.clientX;
+  console.log(NicolasVonCursor);
 }
 function fel(event) {
   console.log(event.clientX);
-  if (event.clientX <= asd - 100 && hol < 2) {
+  if (event.clientX <= NicolasVonCursor - 100 && hol < 2) {
     animacio(hol);
     lapoz(++hol);
-  } else if (event.clientX >= asd + 100 && hol > 0) {
+  } else if (event.clientX >= NicolasVonCursor + 100 && hol > 0) {
     animacio(hol);
     lapoz(--hol);
   }

@@ -28,9 +28,9 @@ body{
 main{
     margin: auto;
     margin-top: 10%;
-    width: 40%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
     gap: 10px;
 }
 
@@ -40,11 +40,14 @@ div{
     border-radius: 20px;
     height: 200px;
     width: 400px;
-    transition: width 1s, height 2s, scale 1s, transform 0s;
+    transition: height 2s 1s, scale 1s, transform 0s;
 }
 div *{
     margin: 10px;
-    transition: opacity 1s;
+    transition: opacity 1s, height 2s 5s;
+}
+div:hover *{
+    transition: opacity 1s 2s;
 }
 div:hover{
     height: 200px;
@@ -59,14 +62,14 @@ div:hover p{
 p{
     opacity: 0;
 }
-.megjelen p, .megjelen a{
-    transition: opacity 1s 1s;
-}
+
 a{
     text-decoration: none;
     color: var(--szin);
 }
-
+a:hover{
+    color: lightblue;
+}
 .megjelen, .megjelen:hover{
     height: 500px;
     width: 300px;
@@ -79,3 +82,8 @@ img{
     width: 100px;    
 }
 /* background: linear-gradient(white, rgb(230, 243, 255)); */
+@media (max-width: 850px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+}

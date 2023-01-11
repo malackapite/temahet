@@ -52,7 +52,7 @@
                 <img src="../images/forest.jpg" alt="">
             </article>
             <br>
-            <article id="olaj">
+            <article id="olaj" style="display: none;">
                 <div id="szoveg">
                     <h2 onclick="csere(0)">kőolaj</h2>
                     <!-- https://yoksel.github.io/url-encoder/ -->
@@ -77,7 +77,7 @@
                     <div id="sorol">
 
                         <div>
-                            <h3 onclick="csere(1)">Toxic compounds</h3>
+                            <h3 onclick="csere(1)">Mérgező vegyületek</h3>
                         </div>
                         <div>
                             <h3 onclick="csere(2)">Üvegházhatású gázok</h3>
@@ -86,13 +86,13 @@
                             <h3 onclick="csere(3)">Mikroműanyagok</h3>
                         </div>
                         <div>
-                            <h3 onclick="csere(4)">Air pollution</h3>
+                            <h3 onclick="csere(4)">Olajháború</h3>
                         </div>
                         <div>
                             <h3 onclick="csere(5)">Savas eső</h3>
                         </div>
                         <div>
-                            <h3 onclick="csere(6)">Oil spills</h3>
+                            <h3 onclick="csere(6)">Olaj szivárgás</h3>
                         </div>
                     </div>
                 </div>
@@ -100,14 +100,10 @@
             </article>
             <article id="levego" style="display: none;">
                 <div>
-                    <h2>air</h2>
-                    <p>Air pollution is the contamination of air due to the presence of substances in the atmosphere
-                        that
-                        are harmful to the health of humans and other living beings, or cause damage to the climate or
-                        to
-                        materials</p>
+                    <h2>légszennyezés</h2>
+                    <p>A levegőszennyezés a levegő olyan szennyeződése, amely a légkörben olyan anyagok jelenléte miatt következik be, amelyek károsak az emberek és más élőlények egészségére, vagy károsítják az éghajlatot vagy az anyagokat.</p>
                 </div>
-                <div>
+                <div id="fact">
                     <div id="asd">
                         <div class="leg">
                             <p>Egy 100 ezer tonnás égető átlagosan 70 ezer köbméter szennyezett füstgázt bocsát ki,
