@@ -3,6 +3,14 @@
     src: url(fonts/NotoSans-Regular.ttf);
 }
 
+html {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -34,10 +42,33 @@ article{
 
 
 .bevez{
-    background-image: url("../images/bevez.gif");
+    background-image: url("../images/fo.png");
     background-size: cover;
     /* padding: 250px; */
-    color: rgb(53, 43, 49);
+    padding-top: 80px;
+}
+
+.bevez h1{
+    font-size: 30px;
+}
+
+.bevez p{
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+#kicsi{
+    margin-left: 55px;
+}
+
+#kicsi h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#kicsi p{
+    font-size: 35px;
 }
 
 .egyart{
@@ -86,8 +117,17 @@ article{
     background-image: url("../images/xx.jpg");
     background-size: cover;
     /* padding: 250px; */
+    padding-top: 80px;
 }
 
+.zaras h1{
+    font-size: 40px;
+    padding: 0;
+}
+
+.zaras p{
+    font-size: 30px;
+}
 
 
 
