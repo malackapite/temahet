@@ -102,7 +102,7 @@ article{
 
 #kicsi{
     display: grid;
-    grid-template-columns: repeat(7, 200px);
+    grid-template-columns: repeat(7, 1fr);
     margin-top: calc(100vh - 300px);
     /* position: relative; */
 }
@@ -229,4 +229,31 @@ article{
         visibility: visible;
         grid-template-rows: auto 0%;
     }
+}
+@media (max-width:1450px) {
+    #kozep{
+        height: 100vh;
+        /* scroll-behavior: smooth; */
+        /* scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity; */
+        /* scroll-snap-points-y: repeat(100vh); */
+        /* overflow-y: scroll; */
+    }
+    #kicsi{
+        display: block;
+        margin-top: 0;
+    }
+    #kicsi > *{
+        height: 100vh;
+        width: 100vw;
+        pointer-events: none;
+        scroll-snap-align: start;
+    }
+    #kicsi > * p{
+        opacity: 1;
+    }
+}
+.white{
+    color: rgb(255, 255, 255);
 }
