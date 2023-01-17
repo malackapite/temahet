@@ -85,3 +85,5 @@ function fel(event) {
 function csere(nth) {
   document.getElementById("csere").innerHTML = olaj[nth];
 }
+
+console.error("tudsz segíteni a matek háziban??\r\nhttps://github.com/malackapite/temahet/wiki")

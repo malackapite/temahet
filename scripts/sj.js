@@ -18,3 +18,5 @@ function mozog(nth){
     document.body.style.setProperty('--egerX', ((document.getElementsByClassName("card")[nth].offsetLeft+hossz/2)-event.clientX)/(hossz/2)*20+"deg");
     document.body.style.setProperty('--egerY', ((document.getElementsByClassName("card")[nth].offsetTop+magas/2)-event.clientY)/(magas/2)*-20+"deg");
 }
+
+console.error("tudsz segíteni a matek háziban??\r\nhttps://github.com/malackapite/temahet/wiki")
