@@ -24,6 +24,7 @@ main{
     "h"
     "a";
     text-align: center;
+    overflow-x: hidden;
     /* font-size: 25px; */
 }
 
@@ -41,34 +42,22 @@ article{
 }
 
 
-.bevez{
-    background-image: url("../images/fo.png");
-    background-size: cover;
-    /* padding: 250px; */
-    padding-top: 80px;
-}
 
 .bevez h1{
-    font-size: 30px;
+    /* margin-top: 80px; */
+    /* font-size: 30px; */
 }
 
 .bevez p{
-    margin-top: 20px;
-    font-size: 22px;
+    /* margin-top: 20px;
+    font-size: 22px; */
 }
 
-#kicsi{
-    margin-left: 55px;
-}
 
 #kicsi h1{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 20px;
-    font-size: 18px;
-}
-
-#kicsi p{
-    font-size: 35px;
+    /* font-size: 40px; */
 }
 
 .egyart{
@@ -113,82 +102,48 @@ article{
     /* padding: 250px; */
 }
 
-.zaras{
-    background-image: url("../images/xx.jpg");
-    background-size: cover;
-    /* padding: 250px; */
-    padding-top: 80px;
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.zaras h1{
+img{
+    width: 100%;
+    max-width: 100vw;
+    pointer-events: none;
+}
+
+h1{
     font-size: 40px;
     padding: 0;
 }
 
 .zaras p{
-    font-size: 30px;
+    /* font-size: 30px; */
+}
+
+p{
+    text-align: justify;
+    /* font-size: 1.25vw; */
+    font-size: 18px;
+}
+
+ul{
+    list-style-type: none;
+}
+#kozep h1{
+    transition: all 2s;
+}
+#kozep h1:hover{
+    transform: scale(1.2);
 }
 
 
 
 
-
-
-
-
-
-
-
-
-#kicsi{
+#kozep{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: calc(100vh - 300px);
-    /* position: relative; */
-}
-#kicsi > *{
-    
-    width: 200px;
-    height: 200px;
-    transition: all 2s;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-#kicsi > * p, #kicsi > * ul{
-    opacity: 0;
-    transition: all 2s;
-}
-#kicsi > *:hover{
-    /* color: white; */
-    width: calc(100vw - 17px);
-    height: calc(100vh - 350px);
-    top: calc(-100% - 30px);
-    z-index: 1;
-}
-#kicsi > *:hover p, #kicsi > *:hover ul{
-    opacity: 1;
-}
-#kicsi > *:nth-child(2):hover{
-    left: -200px;
-}
-#kicsi > *:nth-child(3):hover{
-    left: -400px;
-}
-#kicsi > *:nth-child(4):hover{
-    left: -600px;
-}
-#kicsi > *:nth-child(5):hover{
-    left: -800px;
-}
-#kicsi > *:nth-child(6):hover{
-    left: -1000px;
-}
-#kicsi > *:nth-child(7):hover{
-    left: -1200px;
-}
-#kicsi > *:nth-child(8):hover{
-    left: -1400px;
+    grid-template-columns: 1fr 1fr;
 }
 
 #id{
@@ -198,7 +153,6 @@ article{
 #full > *{
     visibility: hidden;
     display: grid;
-    /* animation: tuz 2s forwards; */
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -270,15 +224,9 @@ article{
         grid-template-rows: auto 0%;
     }
 }
-@media (max-width:1450px) {
-    #kozep{
+@media (max-width:1280px) {
+    /* #kozep{
         height: 100vh;
-        /* scroll-behavior: smooth; */
-        /* scroll-snap-type: proximity;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y proximity; */
-        /* scroll-snap-points-y: repeat(100vh); */
-        /* overflow-y: scroll; */
     }
     #kicsi{
         display: block;
@@ -292,6 +240,27 @@ article{
     }
     #kicsi > * p{
         opacity: 1;
+    } */
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:800px) {
+    body{
+        transform: scale(.75);
+        height: 130vh;
+        width: 130vw;
+        transform-origin: top left;
+    }
+    #kozep{
+        grid-template-columns: 1fr;
+    }
+    img{
+        max-width: 130vw;
+    }
+    #full > *{
+        width: 130vw;
+        height: 130vh;
     }
 }
 .white{
