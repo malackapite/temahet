@@ -9,6 +9,7 @@ html {
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
+   /* overflow-x: hidden; */
 }
 
 *{
@@ -24,7 +25,7 @@ main{
     "h"
     "a";
     text-align: center;
-    overflow-x: hidden;
+    
     /* font-size: 25px; */
 }
 
@@ -38,7 +39,7 @@ header img{
 
 article{
     grid-area: a;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 
@@ -53,11 +54,14 @@ article{
     font-size: 22px; */
 }
 
-
+#kicsi > *{
+    height: calc(100vh / 7 - (22px / 7));
+}
 #kicsi h1{
     /* margin-top: 20px; */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* font-size: 40px; */
+    margin: auto;
 }
 
 .egyart{
@@ -105,6 +109,7 @@ article{
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 img{
@@ -132,14 +137,14 @@ ul{
     list-style-type: none;
 }
 #kozep h1{
-    transition: all 2s;
+    transition: all 1s;
+    /* transform: translateY(50%); */
+    /* white-space: nowrap; */
 }
-#kozep h1:hover{
-    transform: scale(1.2);
+#kozep *:hover > h1{
+    transform: scale(1.05);
+    /* transform: translateY(50%); */
 }
-
-
-
 
 #kozep{
     display: grid;
@@ -150,6 +155,26 @@ ul{
     z-index: 1;
 }
 
+#menu{
+    /* transform: translate(calc(50% - 30px)); */
+    background-color: transparent;
+    /* display: none; */
+}
+#menu > *{
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all .5s;
+}
+#menu > *:hover{
+    background-color: lightslategray;
+    transform: scale(1.2);transition: all .5s;
+}
+#menu > *:active{
+    background-color: rgb(130, 174, 218);
+}
 #full > *{
     visibility: hidden;
     display: grid;
@@ -158,6 +183,10 @@ ul{
     position: fixed;
     z-index: 1;
 }
+#csere *{
+    animation: csere 1s;
+}
+
 .a{
     background: linear-gradient(-45deg, yellow 12px, transparent 0),
     linear-gradient(45deg, yellow 12px, transparent 0);
@@ -261,6 +290,14 @@ ul{
     #full > *{
         width: 130vw;
         height: 130vh;
+    }
+}
+@keyframes csere{
+    0%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
     }
 }
 .white{
